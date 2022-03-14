@@ -6,10 +6,16 @@ jobs:
   first-job: 
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses:  actions/checkout
+
+    - name: Listing
+      run: ls -lhtr
     - name: Print Something
       run:  cat /etc/*rel* 
   
   second-job:
+    needs: [first-job]
     runs-on: ubuntu-latest
     steps:
     - name: Print Something 2
