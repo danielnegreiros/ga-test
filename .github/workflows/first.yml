@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print Something
-      run: cat /etc/*rel*
+      run: | 
+        cat /etc/*rel*
+        uname -r
   
