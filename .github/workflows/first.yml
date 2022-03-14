@@ -8,6 +8,6 @@ jobs:
     steps:
     - name: Print Something
       run: > 
-        cat /etc/*rel* \
+        cat /etc/*rel* |
         uname -r
   
