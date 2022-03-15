@@ -8,17 +8,17 @@ on:
 
   schedule:
     - cron: "0 0 1 1 *"
-    
+
   push:
     branches:
       - "main"
       - "feature/**"
       - "!feature/ABCD"
     tags:
-      - "*"
+      - "**"
       - "!Not This"
     paths:
-      - "*"
+      - "**"
       - "!Not this"
 
   pull_request:
