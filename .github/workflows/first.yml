@@ -1,6 +1,14 @@
 name: Testing
 
-on: [push]
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+    types:
+      - "opened"
 
 jobs: 
   first-job: 
