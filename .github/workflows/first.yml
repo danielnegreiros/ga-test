@@ -1,14 +1,26 @@
 name: Testing
 
 on:
+
   repository_dispatch:
     types:
       - "build"
+
   schedule:
     - cron: "0 0 1 1 *"
+    
   push:
     branches:
       - "main"
+      - "feature/**"
+      - "!feature/ABCD"
+    tags:
+      - "*"
+      - "!Not This"
+    paths:
+      - "*"
+      - "!Not this"
+
   pull_request:
     branches:
       - "main"
