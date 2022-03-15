@@ -20,6 +20,10 @@ jobs:
   first-job: 
     runs-on: ubuntu-latest
     steps:
+
+    - name: Check post variable
+      run: echo ${{ github.event.client_payload.name }}
+
     - name: Checkout
       uses: actions/checkout@v1
 
