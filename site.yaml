@@ -1,0 +1,20 @@
+---
+  # - hosts: web
+  #   become: true
+  #   gather_facts: false
+  #   roles:
+  #   - web
+
+  # - hosts: mysql
+  #   become: true
+  #   gather_facts: false
+  #   roles:
+  #   - mysql
+
+  - hosts: custom_module
+    become: true
+    gather_facts: false
+    roles:
+    - test_custom
+
+

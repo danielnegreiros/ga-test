@@ -1,0 +1,10 @@
+---
+  - name: run the new module
+    my_module:
+      name: 'hi'
+      new: false
+    register: testout
+
+  - name: dump test output
+    debug:
+      msg: '{{ testout }}'

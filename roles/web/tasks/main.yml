@@ -1,0 +1,23 @@
+---
+  # Debug
+  - name: Debug
+    debug: var=password
+
+  # Facts
+  - name: Set Test Fact
+    set_fact:
+      my_new_fact: 'Test 123'
+
+  - name: Get My New Fact
+    debug: var=my_new_fact
+
+  # With Dict
+  - name: Iterate Dicts
+    debug: var=item
+    with_dict: "{{ devices }}"
+
+ # Templates
+  - name: Templating
+    template:
+      src: my_template.j2
+      dest: "/tmp/template.conf"

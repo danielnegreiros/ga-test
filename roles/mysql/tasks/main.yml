@@ -1,0 +1,16 @@
+---
+# tasks file for mysql
+  - name: List Files
+    shell: ls -1 ~
+    register: my_var
+    tags: ["deploy"]
+
+  - debug: var=my_var.stdout_lines
+    tags: ["deploy"]
+
+  - name: Debug Default
+    debug: var=name_abc
+
+  - name: Do something with output
+    shell: ls -lhtr ~/{{ item }}
+    with_items: " {{ my_var.stdout_lines }} "

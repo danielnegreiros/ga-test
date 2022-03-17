@@ -1,0 +1,7 @@
+--- 
+  devices:
+  - device: "ubuntu-1"
+    price: 20
+
+  - device: "ubuntu-2"
+    price: 70
