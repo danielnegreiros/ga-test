@@ -1,5 +1,5 @@
 --- 
   ansible_user: root
-  ansible_private_key_file: ~/.ssh/id_rsa
-  ansible_ssh_common_args: '"-J 192.168.0.108 -o StrictHostKeyChecking=no "'
+  # ansible_private_key_file: ~/.ssh/id_rsa
+  # ansible_ssh_common_args: '"-J 192.168.0.108 -o StrictHostKeyChecking=no "'
   # ansible_ssh_common_args: '-o StrictHostKeyChecking=no -o ProxyCommand="ssh -W %h:%p -q 192.168.0.107"'
