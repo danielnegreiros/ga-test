@@ -11,7 +11,7 @@
   #   roles:
   #   - mysql
 
-  - hosts: containers-inventory
+  - hosts: frontend
     become: true
     gather_facts: false
     roles:
